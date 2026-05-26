@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="header">
+      <a href="index.html">
+            <img src="img/logo pez.png" alt="logo" class="logo">
+      <a href="#menu" class="abrir-menu">☰</a>
+
+    <nav class="menu" id="menu">
+            <a href="#" class="cerrar-menu">X</a>
+
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#acciones">Acciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <video autoplay muted loop playsinline class="video-fondo"> <!-- Video de fondo para el hero. autoplay hace que se reproduzca solo, muted le saca el sonido, loop hace que se repita cuando termina y playsinline hace que no se abra en pantalla completa en celular -->
+    <source src="img/video medusas.mp4" type="video/mp4">
+  </video>
+  
+ <div class="overlay"></div> <!-- filtrito para que el video no sea tan brillante -->
+
+  <div class="hero-texto">
+    <span>ODS 14</span>
+    <h1>Vida submarina</h1>
+    <p>Conservar y proteger los océanos es proteger la vida del planeta. </p>
+    <a href="#problema">Explorar</a>
+  </div>
+
+</section>
+
+<section class="formulario" id="contacto">
+
+  <div class="blur blur1"></div>  <!-- decoraciones para el formulario -->
+
+  <div class="blur blur2"></div>
+
+  <div class="contenido-formulario">
+    <h2>Protejamos el océano</h2>
+    <p>Recibí información y acciones simples para ayudar a conservar la vida submarina. </p>
+
+    <form>
+
+      <input type="email" placeholder="Tu email" required>
+
+      <select required>
+        <option value=""> Tema de interés</option>
+        <option value="plasticos"> Reducir plásticos </option>
+        <option value="playas"> Cuidar playas </option>
+        <option value="especies"> Proteger especies</option>
+      </select>
+
+      <button type="submit"> ENVIAR</button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<section class="descenso" id="problema">
+
+  <div class="bloque-frase">
+    <p>PROTEGER<br>EL MAR</p>
+  </div>
+  
+  <div class="bloque-texto">
+    <h2>El problema es urgente</h2>
+    <p>La contaminación y la pesca excesiva están dañando ecosistemas marinos esenciales para la vida.</p>
+    <a href="#acciones">Ver acciones</a>
+  </div>
+
+  <div class="bloque-imagen">
+    <img src="img/botella flotando.avif" alt="Botella de plástico en el océano">
+  </div>
+
+  <div class="bloque-profundo">
+    <p>Cuanto más descendemos, más entendemos lo importante que es cuidar este ecosistema.</p>
+  </div> 
+  
+  <div class="bloque-extra">
+    <p> Los océanos producen más de la mitad del oxígeno del planeta.</p>
+  </div>
+
+  <div class="bloque-imagen">
+    <img src="img/arrecife coral.jpg" alt="Arrecife de coral">
+  </div>
+  
+</section>
+
+<section class="acciones" id="acciones">
+
+  <h2>¿Cómo podemos ayudar?</h2>
+
+  <article class="tarjeta">
+    <span class="cartel">¡Importante!</span>
+    <img src="img/basura mar.webp" alt="Basura en el mar">
+    <h3>Reducir plásticos</h3>
+    <p>Evitar bolsas y envases descartables hace que menos residuos terminen en el mar.</p>
+    <a href="#">VER MÁS</a>
+  </article>
+
+  <article class="tarjeta">
+    <span class="cartel">¡Importante!</span>
+    <img src="img/recoger basura.jpg" alt="Persona sosteniendo una bolsa de basura">
+    <h3>Cuidar las playas</h3>
+    <p>No dejar basura y participar en limpiezas costeras protege a las especies acuáticas.</p>
+    <a href="#">VER MÁS</a>
+  </article>
+
+  <article class="tarjeta">
+    <span class="cartel">¡Importante!</span>
+    <img src="img/peces oceano.jpg" alt="Cardumen de peces en el océano">
+    <h3>Consumo responsable</h3>
+    <p> Elegir productos del mar de origen sostenible ayuda a cuidar los ecosistemas.</p>
+    <a href="#">VER MÁS</a>
+  </article>
+
+  <article class="tarjeta tarjeta-sin-imagen">
+    <div class="card">
+        <div class="front">
+            <img src="img/ballena.jpg" alt="Ballena con peces">
+            <h3>Proteger especies</h3>
+            <p>Los animales marinos necesitan hábitats sanos para sobrevivir.</p>
+            <a href="#">VER MÁS</a>
+        </div>
+        <div class="back">
+            <h3>¿Sabías que...?</h3>
+            <p>Muchas especies marinas pierden sus hábitats debido a la contaminación y al cambio climático.</p>
+        </div>
+    </div>
+  </article>
+
+  <article class="tarjeta tarjeta-sin-imagen">
+    <div class="card">
+        <div class="front">
+            <img src="img/peces enarrecife.jpg" alt="Peces en arrecife">
+            <h3>Informar y compartir</h3>
+            <p>Difundir el problema es una forma de promover cambios.</p>
+            <a href="#">VER MÁS</a>
+        </div>
+        <div class="back">
+            <h3>Pequeñas acciones</h3>
+            <p>Compartir información y educar a otros puede generar conciencia y cambios reales.</p>
+        </div>
+    </div>
+</article>
+
+</section>
+
+<footer class="footer" id="contacto">
+
+  <h2>Redes sociales</h2>
+
+  <div class="redes">
+    <a href="#">IN</a>
+    <a href="#">TW</a>
+    <a href="#">IG</a>
+    <a href="#">WA</a>
+  </div>
+
+</footer>
+
+</body>
+</html>
