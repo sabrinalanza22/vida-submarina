@@ -17,7 +17,8 @@
 }
 
 body {
-  background: linear-gradient(to bottom, var(--azul-claro), var(--azul-medio), var(--azul-profundo));
+
+  background: linear-gradient(to bottom, var(--azul-claro), var(--azul-medio), var(--azul-profundo));  /* degradado de arriba a abajo para que el sitio empiece más claro y se vuelva más oscuro al bajar, como si se descendiera hacia la profundidad del océano :) */
   font-family: var(--fuente-texto);
 }
 
@@ -32,12 +33,12 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: fixed; /* fixed hace que el header quede fijo para que me siga al hacer scroll */
   top: 0;
   left: 0;
   z-index: 1000;
   background-color: rgba(1, 20, 38, 0.35);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* sirve para difuminar un poco lo que está atrás */
 }
 
 .logo {
@@ -69,10 +70,10 @@ img {
   right: -100%;
   padding: 2em;
   transition: 0.5s;
-  z-index: 10000;
+  z-index: 10000; /* número muy alto para que quede por encima de todo */
 }
 
-.menu:target {
+.menu:target { /* :target se activa cuando hago click en el enlace con #menu, así el menú pasa de estar fuera de pantalla a right:0 */
   right: 0;
 }
 
@@ -98,22 +99,22 @@ img {
   width: 100%;
   height: 40em;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* hace que no se vea nada fuera de los límites del hero */
 }
 
 .video-fondo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* para que ocupe todo el espacio sin deformarse */
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.overlay {
+.overlay { /* es como una capa oscura para que el video no quede tan brillante y el texto blanco se lea mejor */
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.35); 
   position: absolute;
   top: 0;
   left: 0;
@@ -126,7 +127,7 @@ img {
   position: absolute;
   left: 50%;
   bottom: 12em;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* para centrar el bloque de texto después de moverlo al 50% */
   color: var(--blanco);
   z-index: 5;
 }
@@ -183,7 +184,7 @@ img {
   width: 85%;
   margin: 2em auto 4em;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* oculta lo que se salga para que los blur decorativos no sobresalgan del formulario */
   border-radius: 2em;
   padding: 2em 1.5em;
   background: rgba(26, 65, 124, 0.78);
@@ -192,7 +193,7 @@ img {
   z-index: 10;
 }
 
-.blur {
+.blur { /* Son dos círculos con blur que funcionan como "luces decorativas" para que el formulario quede más lindo :) */
   width: 12em;
   height: 12em;
   border-radius: 50%;
@@ -215,7 +216,7 @@ img {
 
 .contenido-formulario {
   position: relative;
-  z-index: 5;
+  z-index: 5; /* para que el contenido quede por encima de los blur decorativos */
   text-align: center;
   color: var(--blanco);
 }
@@ -254,7 +255,7 @@ input, select {
   background-color: rgba(255, 255, 255, 0.12);
   color: var(--blanco);
   font-family: var(--fuente-texto);
-  outline: none;
+  outline: none; /* saca el borde automático del navegador para que pueda usar un estilo propio en el focus */
   backdrop-filter: blur(5px);
 }
 
@@ -267,8 +268,7 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-input:focus,
-select:focus {
+input:focus, select:focus {
   background-color: rgba(255, 255, 255, 0.18);
 }
 
@@ -370,7 +370,7 @@ button:hover {
 }
 
 .bloque-extra {
-  display: none;
+  display: none; /* queda oculto en celular y aparece recién en tablet (y después en desktop) */
 }
 
 .acciones {
@@ -440,7 +440,7 @@ button:hover {
 }
 
 .tarjeta-sin-imagen img, .cartel, .back {
-  display: none;
+  display: none; /* en mobile y tablet se ocultan estas partes porque solo están en desktop */
 }
 
 .cartel {
@@ -499,7 +499,7 @@ button:hover {
   }
 
   .abrir-menu, .cerrar-menu, .overlay-menu {
-    display: none;
+    display: none; /* ya no hay menú hamburguesa */
   }
 
   .menu {
@@ -553,7 +553,7 @@ button:hover {
   }
 
   .formulario form {
-    display: grid;
+    display: grid; /* paso el formulario a grilla para que los campos queden en horizontal */
     grid-template-columns: 1fr 1fr auto;
     gap: 1em;
     align-items: center;
@@ -578,7 +578,7 @@ button:hover {
   }
 
   .bloque-texto {
-    grid-row: span 2;
+    grid-row: span 2; /* este bloque ocupa dos filas */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -586,7 +586,7 @@ button:hover {
   }
 
   .bloque-profundo {
-    grid-column: span 2;
+    grid-column: span 2; /* ocupa las dos columnas de la grilla */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -640,7 +640,7 @@ button:hover {
   .tarjeta-sin-imagen:nth-of-type(5) {
     grid-column: 2;
     grid-row: 4;
-    transform: translateY(-12em);
+    transform: translateY(-12em); /* lo sube un poco */
   }
 
   .tarjeta-sin-imagen:nth-of-type(6) {
@@ -741,7 +741,7 @@ button:hover {
 
   .bloque-texto {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 2; /* empieza en la primera fila y ocupa dos filas para quedar como un bloque vertical grande */
     min-height: 36em;
     display: flex;
     flex-direction: column;
@@ -749,7 +749,7 @@ button:hover {
   }
 
   .bloque-profundo {
-    grid-column: 3 / span 2;
+    grid-column: 3 / span 2; /* empieza en la columna 3 y ocupa dos columnas */
     grid-row: 1;
     min-height: 18em;
     display: flex;
@@ -773,7 +773,7 @@ button:hover {
     width: 80%;
     max-width: 70em;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* para que entren tres tarjetas arriba y las dos últimas queden centradas abajo */
     justify-content: center;
     column-gap: 2em;
     row-gap: 2.5em;
@@ -795,15 +795,14 @@ button:hover {
   }
 
   .tarjeta p {
-    flex-grow: 1;
+    flex-grow: 1; /* hace que el texto ocupe el espacio disponible y ayuda a alinear mejor los botones */
   }
 
   .tarjeta a {
     margin-right: auto;
   }
 
-  .tarjeta-sin-imagen img,
-  .cartel {
+  .tarjeta-sin-imagen img, .cartel {
     display: block;
   }
 
@@ -820,7 +819,7 @@ button:hover {
   }
 
   .tarjeta-sin-imagen {
-    perspective: 1000px;
+    perspective: 1000px; /* para que el giro de la tarjeta tenga profundidad */
   }
 
   .card {
@@ -829,21 +828,20 @@ button:hover {
     height: 100%;
     min-height: 24em;
     transition: transform 0.7s;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /* mantiene el efecto 3D entre el frente y la parte de atrás de la tarjeta */
   }
 
   .tarjeta-sin-imagen:hover .card {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* al pasar el cursor, la tarjeta gira 180° y muestra el contenido de atrás */
   }
 
-  .front,
-  .back {
+  .front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* hace que no se vea la parte de atrás mientras la tarjeta todavía está de frente, y viceversa */
     border-radius: 1.2em;
   }
 
